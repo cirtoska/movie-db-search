@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 :root {
   --primary-clr-1: #212529;
@@ -27,6 +28,7 @@ body {
   background-color: var(--primary-clr-2);
   color: var(--primary-clr-8);
   font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
 }
 
 @keyframes spinner {
@@ -46,9 +48,7 @@ body {
   animation: spinner 0.6s linear infinite;
 }
 
-img {
-  width: 100%;
-}
+
 
 a {
   text-decoration: none;
@@ -66,16 +66,20 @@ header {
 }
 header > img {
   margin-top: 1rem;
+  margin-right: 1rem;
   display: block;
   width: 50px;
   height: 50px;
 }
+
+.main {
+  margin: 5rem;
+}
 .movies {
-  width: 1100px;
-  margin: 3rem auto;
+
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 4rem;
 }
 
 .movie img {
@@ -109,9 +113,7 @@ header > img {
   color: var(--primary-clr-6);
 }
 
-/* .movie:hover .movie-info {
-  transform: translateY(0);
-} */
+
 
 .search-form {
   width: 90vw;
@@ -143,7 +145,7 @@ header > img {
 
 .secondary-display {
   background-color: var(--primary-clr-8);
-  padding: 3rem 0;
+  padding: 4rem;
 }
 
 .secondary-display .movie {
@@ -172,12 +174,13 @@ header > img {
   
 }
 .container {
-    width: 1100px;
-    margin: 3rem auto;
+
+    margin: 4rem;
 }
 .info, .movie-title, .details {
   display: flex;
     gap: 3rem;
+    padding: 1rem 0;
 }
 .movie-title {
 align-items: center;
@@ -185,7 +188,6 @@ align-items: center;
 }
 
 .info img {
-  width: 40%;
   border: 5px solid var(--primary-clr-8);
   box-shadow: var(--dark-shadow);
 }
@@ -201,6 +203,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  max-width: 60%;
 }
 
 /* 404 Not Found */
@@ -213,7 +216,9 @@ align-items: center;
   text-align: center;
   margin-bottom: 2rem;
 }
-
+.btn-wrap {
+  margin-top: 2rem;
+}
 .btn {
   background-color: var(--secondary-clr-1);
   color: var(--primary-clr-1);
@@ -225,4 +230,42 @@ align-items: center;
 .btn:hover {
   opacity: 0.85;
   transition: all 0.5s ease-in-out;
+}
+
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.signature {
+  font-family: 'Allura', cursive;
+  font-size: 1.4rem;
+}
+
+.icon {
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .info, .movie-title, .details {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .info img {
+    width: 90%;
+  }
+  .plot {
+    max-width: 90%;
+  }
+  .plot p {
+    padding: 1rem 0;
+  }
+  .btn-wrap {
+    text-align: center;
+  }
 }
