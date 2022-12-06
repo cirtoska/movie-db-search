@@ -1,3 +1,10 @@
+# Movie DataBase Search Engine
+
+This is Movie DB App for browsing movies. It's build with React using custom fetch hook and contex.
+
+Live Preview https://movie-db-search.vercel.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
